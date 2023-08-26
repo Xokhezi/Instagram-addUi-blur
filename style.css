@@ -13,8 +13,10 @@ body {
   width: 80%;
   position: relative;
 }
-.list-section {
-  display: none;
+.dialog-section {
+  opacity: 0;
+  transform: translateY(-200%);
+  display: flex;
   position: absolute;
   top: 65px;
   width: 200px;
@@ -25,14 +27,6 @@ body {
   border-radius: 15px;
   background: rgba(246, 244, 244, 0.95);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-.list-item {
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-  height: 50px;
-  align-items: center;
-  width: 100%;
 }
 .container {
   width: 80%;
@@ -58,14 +52,15 @@ body {
   opacity: 0.3;
 }
 .show {
-  display: flex;
   animation: show 0.5s ease-in-out forwards;
 }
 @keyframes show {
   0% {
     opacity: 0;
+    transform: translateY(-10%);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
